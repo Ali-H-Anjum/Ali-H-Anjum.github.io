@@ -1,5 +1,5 @@
 :root {
-	--cell-size: 250px;
+	--cell-size: 200px;
 
 	--color: rgb(210, 169, 238);  /* for hover */
 	--color-set: #9d23b3;  /* when set */
