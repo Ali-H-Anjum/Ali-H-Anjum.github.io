@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Project 3
+   
+   A Tribute Page
+   Author: Ali Anjum
+   Date: 9/21/2023
+   
+   Filename: css_styles.css
+
+*/
+
+html {
+    background-color: #EC8B5E;
+}
+
+body {
+    margin: 0%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #141A46;
+    color: #EC8B5E;
+    padding: 35px;
+    zoom: 80%;
+}
+
+header {
+    text-align: center;
+    font-size: 72px;
+}
+
+img {
+    text-align: left;
+    background-color: #EC8B5E;
+    width: 50%;
+    padding: 20px;
+    border-radius: 400px;
+    margin: 50px;
+}
+
+blockquote {
+    text-align: center;
+    font-style: georgia;
+    font-size: 40px;
+    background-color: #EC8B5E;
+    color: #141A46;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 300px;
+}
+
+.float-right {
+    float: right;
+  }
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    color:  #EC8B5E;
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    text-align: left;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+p {
+    text-align: center;
+    color:  #EC8B5E;
+    font-size: 25px;
+}
+
+button {
+    text-align: center;
+    background-color: #EC8B5E;
+    align-items: center;
+    color: #141A46;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 300px;
+    position: relative;
+    
+    font-size: 2em;
+}
+
+button:hover {
+    /* Style on hover */
+    background-color: #f5b699;
+   }
+
