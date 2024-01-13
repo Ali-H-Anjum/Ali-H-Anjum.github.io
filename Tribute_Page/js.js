@@ -6,7 +6,7 @@ function switchCSS() {
    let styles = document.getElementById("styles");
    console.log(styles.href)
    // If the current stylesheet is the reset CSS, switch back to the original CSS
-   if (styles.href == "file:///C:/Users/potat/OneDrive%20-%20Year%20Up/MOD_1/CIS_301/Week_3/Project_3/reset.css") {
+   if (styles.href == "https://ali-h-anjum.github.io/Tribute_Page/reset.css") {
     
     styles.href = "css_styles.css";
     button.innerText = "Let's see what this webpage would look like without him";
