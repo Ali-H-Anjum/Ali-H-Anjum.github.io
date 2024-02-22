@@ -1,0 +1,259 @@
+@charset "utf-8";
+@font-face {
+    font-family: Didot;
+    src: url(GFSDidot-Regular.ttf);
+}
+
+@font-face {
+    font-family: Didot Italic;
+    src: url(Didot_Italic.ttf);
+}
+
+@font-face {
+    font-family: Butler;
+    src: url(Butler_Bold.otf);
+}
+
+@font-face {
+    font-family: Didot Bold;
+    src: url(Didot_Bold.ttf);
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-areas: "header main"
+                         "header main";
+}
+
+header {
+    width: 100%;
+    grid-area: header;
+    height: 100vh;
+    display: flex;
+}
+
+.headergrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-areas: "logo"
+                         "address"
+                         "navigationbar";
+}
+
+div#logo img {
+    grid-area: logo;
+    width: 100%;
+}
+
+div#address {
+    width: 100%;
+    grid-area: address;
+    text-align: center;
+
+    font-family: Didot;
+    font-style: italic;
+    font-weight: 300;
+    font-size: .8125rem;
+}
+
+div#address hr {
+    width: 80%;
+}
+
+div#navigationbar {
+    grid-area: navigationbar;
+
+    height: 100%;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "link"
+                         "link"
+                         "link";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-family: Butler;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    outline: dotted;
+}
+
+div#navigationbar a {
+    grid-area: link;
+
+    justify-content: center;
+
+    width: 100%;
+    flex: 1;
+    text-decoration: none;
+    display: flex;
+
+    outline: dotted;
+
+    padding-top: 47%;
+    padding-bottom: 47%;
+}
+
+main {
+    grid-area: main;
+}
+
+.scroll {
+    overflow-y: auto;
+}
+
+div#aboutpics{
+    height: 100vh;
+}
+
+div#aboutpics img {
+    border: hidden;
+
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0; 
+    
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+div#aboutcontent {
+    background-color: #EFEEEC;
+    height: fit-content;
+    padding-bottom: 5%;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 5%;
+
+    font-family: Didot Italic;
+    letter-spacing: -.5px;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+div#aboutcontent p {
+    text-align: left;
+    padding-top: 1%;
+    padding-left: 20%;
+    padding-right: 20%;
+
+    font-family: Didot;
+    letter-spacing: -.5px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+div#menugrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "menu1 menu2"
+}
+
+div#menu1 {
+    grid-area: menu1;
+}
+
+div#menu2 {
+    grid-area: menu2;
+}
+
+div#menu1, div#menu2 {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+div#menucontent h2 {
+    text-align: center;
+
+    font-family: "Didot Italic";
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: -.5px;
+    font-size: 1.5rem;
+}
+
+div#menucontent p {
+    
+    text-align: left;
+    text-transform: none;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.bold {
+    font-family: Didot Bold;
+}
+
+.didot {
+    font-family: Didot;
+}
+
+div#input {
+    background-color: #EFEEEC;
+    height: fit-content;
+    padding-bottom: 5%;
+    line-height: 2;
+    text-align: left;
+
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+
+    padding: 20px;
+    border-radius: 10px;
+
+    background-color: #586679;
+    opacity: 0.7;
+
+    float: left;
+}
+
+div#input legend {
+    text-align: center;
+    font-family: "Didot Italic";
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: -.5px;
+    font-size: 1.5rem;
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .headergrid {
+        display: none;
+    }
+}

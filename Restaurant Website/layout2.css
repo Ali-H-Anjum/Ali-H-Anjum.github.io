@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Didot;
+    src: url(GFSDidot-Regular.ttf);
+}
+
+@font-face {
+    font-family: Didot Italic;
+    src: url(Didot_Italic.ttf);
+}
+
+@font-face {
+    font-family: Didot Bold;
+    src: url(Didot_Bold.ttf);
+}
+
+div#menucontent {
+    background-color: #EFEEEC;
+}
+
+div#menucontent h1 {
+    text-align: center;
+    padding-top: 5%;
+
+    font-family: Didot Italic;
+    letter-spacing: -.5px;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+div#menucontent h2 {
+    text-align: center;
+
+    font-family: "Didot Italic";
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: -.5px;
+    font-size: 1.5rem;
+}
+
+div#menucontent p {
+    text-align: left;
+    text-transform: none;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+div#menugrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "menu1 menu2"
+
+}
+
+div#menu1 {
+    grid-area: menu1;
+}
+
+div#menu2 {
+    grid-area: menu2;
+}
+
+div#menu1, div#menu2 {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.bold {
+    font-family: Didot Bold;
+}
+
+.didot {
+    font-family: Didot;
+}

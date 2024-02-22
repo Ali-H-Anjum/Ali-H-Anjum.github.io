@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Didot;
+    src: url(GFSDidot-Regular.ttf);
+}
+@font-face {
+    font-family: Butler;
+    src: url(Butler_Bold.otf);
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-areas: "header main"
+                         "header main";
+}
+
+header {
+    outline: dotted;
+    width: 100%;
+    grid-area: header;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.headergrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-areas: "logo"
+                         "address"
+                         "navigationbar";
+}
+
+div#logo img {
+    outline: dotted;
+    grid-area: logo;
+    width: 100%;
+}
+
+div#address {
+    outline: dotted;
+    width: 100%;
+    grid-area: address;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+
+    font-family: Didot;
+    font-style: italic;
+    font-weight: 300;
+    font-size: .8125rem;
+}
+
+div#address hr {
+    width: 80%;
+}
+
+div#navigationbar {
+    outline: dotted;
+    grid-area: navigationbar;
+
+    height: 100%;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "link"
+                         "link"
+                         "link";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-family: Butler;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+div#navigationbar a {
+    outline: dotted;
+    grid-area: link;
+
+    justify-content: center;
+
+    width: 100%;
+    flex: 1;
+    text-decoration: none;
+    display: flex;
+
+    margin-top: 70%;
+    margin-bottom: 70%;
+}
+
+main {
+    grid-area: main;
+
+    opacity: 0; 
+    
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+div#bigpic{
+    height: 100vh;
+}
+
+div#bigpic img {
+    border: hidden;
+
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.scroll {
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .headergrid {
+        display: none;
+    }
+}
