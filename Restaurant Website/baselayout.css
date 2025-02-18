@@ -43,13 +43,11 @@ header {
 }
 
 div#logo img {
-    outline: dotted;
     grid-area: logo;
     width: 100%;
 }
 
 div#address {
-    outline: dotted;
     width: 100%;
     grid-area: address;
     text-align: center;
@@ -68,7 +66,6 @@ div#address hr {
 }
 
 div#navigationbar {
-    outline: dotted;
     grid-area: navigationbar;
 
     height: 100%;
@@ -89,7 +86,6 @@ div#navigationbar {
 }
 
 div#navigationbar a {
-    outline: dotted;
     grid-area: link;
 
     justify-content: center;
