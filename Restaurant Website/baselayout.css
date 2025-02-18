@@ -27,7 +27,6 @@ body {
 }
 
 header {
-    outline: dotted;
     width: 100%;
     grid-area: header;
     height: 100vh;
