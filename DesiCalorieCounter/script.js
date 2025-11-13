@@ -1,5 +1,5 @@
 // API Configuration - USING FREE APIS
-const NINJAS_API_KEY = 'YOUR_API_NINJAS_KEY'; // Get free from https://api-ninjas.com/
+const NINJAS_API_KEY = 'Pk8sm463KTnYY3uesYO9Uw==Tq6GAvZMeqntnJtz'; // Get free from https://api-ninjas.com/
 const NUTRITIONIX_APP_ID = 'YOUR_APP_ID'; // Get free from https://www.nutritionix.com/
 const NUTRITIONIX_APP_KEY = 'YOUR_APP_KEY';
 
