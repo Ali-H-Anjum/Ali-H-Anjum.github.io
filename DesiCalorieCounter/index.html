@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Asian Food Calorie Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .camera-section, .manual-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+        }
+        #video, #canvas, #preview {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e8;
+            border-radius: 5px;
+            display: none;
+        }
+        .daily-total {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .food-log {
+            margin-top: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .food-item {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="daily-total">
+        Today's Total: <span id="totalCalories">0</span> kcal
+    </div>
+
+    <div class="container">
+        <h1>🍛 South Asian Food Calorie Tracker</h1>
+        
+        <div class="camera-section">
+            <h2>📷 Take Food Photo</h2>
+            <video id="video" width="400" height="300" autoplay></video>
+            <canvas id="canvas" style="display:none;"></canvas>
+            <div>
+                <button id="startCamera">Start Camera</button>
+                <button id="capture" disabled>Capture Photo</button>
+                <button id="retake" disabled>Retake</button>
+            </div>
+            <div id="previewContainer" style="display:none;">
+                <img id="preview" alt="Captured preview">
+                <button id="analyze">Analyze Food & Calories</button>
+            </div>
+        </div>
+
+        <div class="manual-section">
+            <h2>🔍 Or Search Manually</h2>
+            <input type="text" id="foodSearch" placeholder="Search for South Asian food (e.g., biryani, samosa)">
+            <button id="searchFood">Search Calories</button>
+        </div>
+
+        <div class="result" id="result">
+            <h3>Analysis Result</h3>
+            <div id="resultContent"></div>
+            <button id="addToTotal">Add to Daily Total</button>
+        </div>
+
+        <div class="food-log">
+            <h3>Today's Food Log</h3>
+            <div id="foodLog"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
